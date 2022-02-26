@@ -1,0 +1,6 @@
+docker run -d --name postgres -e POSTGRES_PASSWORD=admin -e POSTGRES_DB=bank -p 5432:5432 -v /Users/cristianfranco/docker-labs/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql  postgres 
+
+
+docker build -t eureka .
+
+docker run -d --name eureka -p 1111:1111 eureka
